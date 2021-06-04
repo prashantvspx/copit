@@ -38,16 +38,23 @@ class _EnterOtpNumberClassState extends State<EnterOtpNumberClass> {
             children: [
               Padding(
                 padding: EdgeInsets.only(top: 40),
-                child: CircleAvatar(
-                    radius: 80,
-                    backgroundColor: ColorsConst.edittxtbgColor,
+                child: Container(
+                    width: 105,
+                    height: 105,
+                    decoration: BoxDecoration(
+                        color: ColorsConst.edittxtbgColor,
+                        shape: BoxShape.circle),
+                    alignment: Alignment.bottomCenter,
                     child: Image.asset(
                       'assets/images/vectorSmartObject.png',
-                      fit: BoxFit.fitHeight,
+                      // fit: BoxFit.fitHeight,
                     )),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: Spacings.large),
+                padding: const EdgeInsets.only(
+                  top: Spacings.xxLarge,
+                  left: Spacings.xmedium,
+                ),
                 child: Text(
                   'Forgot Password',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
@@ -59,8 +66,12 @@ class _EnterOtpNumberClassState extends State<EnterOtpNumberClass> {
               SizedBox(
                 height: Spacings.xxLarge,
               ),
-              CustomTextfeild(
-                hintText: "Enter Your Number",
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: Spacings.large, right: Spacings.large),
+                child: CustomTextfeild(
+                  hintText: "Enter Your Number",
+                ),
               ),
 
               Padding(

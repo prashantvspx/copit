@@ -55,7 +55,7 @@ class _LoginpageClassState extends State<LoginpageClass> {
                       controller: emailController,
                     ),
                     SizedBox(
-                      height: Spacings.medium,
+                      height: Spacings.xxmedium,
                     ),
                     CustomTextfeild(
                       hintText: "Password",

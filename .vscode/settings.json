@@ -1,0 +1,4 @@
+{
+    "terminal.integrated.automationShell.windows": "",
+    "terminal.integrated.shell.osx": "/bin/bash"
+}

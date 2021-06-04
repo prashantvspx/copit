@@ -36,7 +36,6 @@ class _SignUpClassState extends State<SignUpClass> {
         child: Scaffold(
           body: SingleChildScrollView(
             child: Container(
-              padding: EdgeInsets.all(10),
               child: Form(
                 child: Padding(
                   padding: const EdgeInsets.only(
@@ -56,7 +55,7 @@ class _SignUpClassState extends State<SignUpClass> {
                         style: TextStyle(
                             color: ColorsConst.PrimryblackColor,
                             height: 2,
-                            fontSize: Spacings.smedium,
+                            fontSize: Spacings.xxmedium,
                             letterSpacing: 0.24,
                             fontFamily: 'Poppins'),
                       ),
@@ -68,21 +67,21 @@ class _SignUpClassState extends State<SignUpClass> {
                         controller: nameController,
                       ),
                       SizedBox(
-                        height: Spacings.medium,
+                        height: Spacings.xxmedium,
                       ),
                       CustomTextfeild(
                         hintText: "Email",
                         controller: emailController,
                       ),
                       SizedBox(
-                        height: Spacings.medium,
+                        height: Spacings.xxmedium,
                       ),
                       CustomTextfeild(
                         hintText: "Phone Number",
                         controller: numberController,
                       ),
                       SizedBox(
-                        height: Spacings.medium,
+                        height: Spacings.xxmedium,
                       ),
                       CustomTextfeild(
                         hintText: "Student ID",
@@ -116,7 +115,7 @@ class _SignUpClassState extends State<SignUpClass> {
                                 style: TextStyle(
                                     color: ColorsConst.PrimryColor,
                                     fontFamily: 'Poppins',
-                                    fontSize: 17,
+                                    fontSize: Spacings.medium,
                                     decoration: TextDecoration.underline),
                               )
                             ]),
