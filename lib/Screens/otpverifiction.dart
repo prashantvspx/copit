@@ -34,11 +34,16 @@ class _MyOtpvarState extends State<MyOtpvar> {
             children: [
               Padding(
                 padding: EdgeInsets.only(top: 40),
-                child: CircleAvatar(
-                    radius: 80,
-                    backgroundColor: ColorsConst.edittxtbgColor,
+                child: Container(
+                    width: 105,
+                    height: 105,
+                    decoration: BoxDecoration(
+                        color: ColorsConst.edittxtbgColor,
+                        shape: BoxShape.circle),
+                    alignment: Alignment.bottomCenter,
                     child: Image.asset(
                       'assets/images/vectorSmartObject.png',
+                      // fit: BoxFit.fitHeight,
                     )),
               ),
               Padding(
@@ -61,7 +66,7 @@ class _MyOtpvarState extends State<MyOtpvar> {
                       showCursor: false,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
-                        fillColor: Colors.blue[100],
+                        fillColor: ColorsConst.edittxtbgColor,
                         filled: true,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(35),
@@ -75,7 +80,7 @@ class _MyOtpvarState extends State<MyOtpvar> {
                       showCursor: false,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
-                        fillColor: Colors.blue[100],
+                        fillColor: ColorsConst.edittxtbgColor,
                         filled: true,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(35),
@@ -89,7 +94,7 @@ class _MyOtpvarState extends State<MyOtpvar> {
                       showCursor: false,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
-                        fillColor: Colors.blue[100],
+                        fillColor: ColorsConst.edittxtbgColor,
                         filled: true,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(35),
@@ -103,7 +108,7 @@ class _MyOtpvarState extends State<MyOtpvar> {
                       showCursor: false,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
-                        fillColor: Colors.blue[100],
+                        fillColor: ColorsConst.edittxtbgColor,
                         filled: true,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(35),

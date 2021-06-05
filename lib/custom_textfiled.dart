@@ -1,7 +1,6 @@
 import 'package:copit/Colors.dart';
 import 'package:copit/images.dart';
 import 'package:copit/spacing.dart';
-import 'package:copit/textStyle.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +22,8 @@ class _CustomTextfeildState extends State<CustomTextfeild> {
 
   @override
   void initState() {
+      
+
     isObsecureText = widget.isPassword;
     super.initState();
   }
@@ -58,10 +59,11 @@ class _CustomTextfeildState extends State<CustomTextfeild> {
             : Offstage(),
         filled: true,
         ////For All App common Text decoration
-        contentPadding: EdgeInsets.only(top: 20, bottom: 20, left: 22.5),
+        contentPadding:
+            EdgeInsets.only(top: 20, bottom: Spacings.large, left: 22.5),
         hintText: widget.hintText ?? '-',
         hintStyle: TextStyle(
-          fontSize: Spacings.medium,
+          fontSize: Spacings.xxmedium,
           fontFamily: 'Poppins',
         ),
         focusedBorder: OutlineInputBorder(

@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class ImageAssets {
   /// imageEndPoint
   static String imageEndPoint = 'assets/images/';
+  static String backarrowicon = imageEndPoint + 'artwork.png';
+  static String logouticon = imageEndPoint + 'logout.png';
 
   static Image AppLogos({Color? color}) =>
       Image.asset('${imageEndPoint}cop_logo.png',
@@ -30,6 +32,22 @@ class ImageAssets {
       );
   static Image backleftLogos({Color? color}) => Image.asset(
         '${imageEndPoint}vectorSmartleft.png',
+        color: color,
+      );
+  static Image menusLogos({Color? color}) => Image.asset(
+        '${imageEndPoint}menu.png',
+        color: color,
+      );
+  static Image LocationLogos({Color? color}) => Image.asset(
+        '${imageEndPoint}location.png',
+        color: color,
+      );
+  static Image alermLogos({Color? color}) => Image.asset(
+        '${imageEndPoint}noti.png',
+        color: color,
+      );
+  static Image searchLogos({Color? color}) => Image.asset(
+        '${imageEndPoint}search.png',
         color: color,
       );
 }

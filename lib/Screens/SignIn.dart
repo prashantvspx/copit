@@ -105,7 +105,7 @@ class _SignInClassState extends State<SignInClass> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(
-                                top: Spacings.small,
+                                top: Spacings.xxmedium,
                                 left: Spacings.large,
                                 right: Spacings.large),
                             child: CustomTextfeild(
@@ -115,7 +115,7 @@ class _SignInClassState extends State<SignInClass> {
                             ),
                           ),
                           SizedBox(
-                            height: Spacings.small,
+                            height: Spacings.xxmedium,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(

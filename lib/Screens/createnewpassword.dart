@@ -1,4 +1,5 @@
 import 'package:copit/Colors.dart';
+import 'package:copit/Screens/homepage.dart';
 import 'package:copit/custom_textfiled.dart';
 import 'package:copit/custombuttion.dart';
 import 'package:copit/images.dart';
@@ -159,13 +160,27 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                                           child: MaterialButton(
                                             onPressed: () {
                                               Navigator.pop(context);
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          HomePage_drawer()));
                                             },
+                                            // child: GestureDetector(
+                                            //   onTap: () {
+                                            //     Navigator.push(
+                                            //         context,
+                                            //         MaterialPageRoute(
+                                            //             builder: (context) =>
+                                            //                 HomePage()));
+                                            //   },
                                             child: Text(
                                               'BACK TO MY APP',
                                               style: TextStyle(
-                                                  fontSize: Spacings.smedium,
+                                                  fontSize: Spacings.xmedium,
                                                   fontWeight: FontWeight.bold),
                                             ),
+                                            //),
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(30),
