@@ -3,14 +3,22 @@ import 'package:copit/images.dart';
 import 'package:copit/spacing.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTextfeild extends StatefulWidget {
   final String? hintText;
+  final TextInputType? keybordstype;
   final TextEditingController? controller;
   final bool isPassword;
+  final List<TextInputFormatter>? numlength;
 
   const CustomTextfeild(
-      {Key? key, this.hintText, this.controller, this.isPassword = false})
+      {Key? key,
+      this.hintText,
+      this.numlength,
+      this.controller,
+      this.isPassword = false,
+      this.keybordstype})
       : super(key: key);
 
   @override
@@ -22,8 +30,6 @@ class _CustomTextfeildState extends State<CustomTextfeild> {
 
   @override
   void initState() {
-      
-
     isObsecureText = widget.isPassword;
     super.initState();
   }
@@ -31,6 +37,8 @@ class _CustomTextfeildState extends State<CustomTextfeild> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      inputFormatters: widget.numlength,
+      keyboardType: widget.keybordstype,
       //For All App common Textfiled
       controller: widget.controller,
       obscureText: isObsecureText,

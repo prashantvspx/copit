@@ -1,8 +1,10 @@
 import 'package:copit/Colors.dart';
 import 'package:copit/Screens/SignIn.dart';
+import 'package:copit/Screens/loginpage.dart';
 import 'package:copit/custom_textfiled.dart';
 import 'package:copit/images.dart';
 import 'package:copit/spacing.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../custombuttion.dart';
@@ -30,9 +32,8 @@ class _SignUpClassState extends State<SignUpClass> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SafeArea(
+    return Scaffold(
+      body: SafeArea(
         child: Scaffold(
           body: SingleChildScrollView(
             child: Container(
@@ -77,6 +78,7 @@ class _SignUpClassState extends State<SignUpClass> {
                         height: Spacings.xxmedium,
                       ),
                       CustomTextfeild(
+                        keybordstype: TextInputType.number,
                         hintText: "Phone Number",
                         controller: numberController,
                       ),
@@ -92,7 +94,7 @@ class _SignUpClassState extends State<SignUpClass> {
                       ),
                       ButtonPrimary(
                         enabled: true,
-                        text: 'Next ',
+                        text: 'Next',
                         trailing: ImageAssets.backleftLogos(),
                         onTap: () {
                           Navigator.push(
@@ -108,9 +110,17 @@ class _SignUpClassState extends State<SignUpClass> {
                         textAlign: TextAlign.center,
                         text: TextSpan(
                             text: 'Already have an Account ? ',
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(
+                                color: Colors.black, fontFamily: 'poppins'),
                             children: [
                               TextSpan(
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => LoginPage()));
+                                  },
                                 text: 'Sign in',
                                 style: TextStyle(
                                     color: ColorsConst.PrimryColor,

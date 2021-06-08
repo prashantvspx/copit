@@ -1,3 +1,4 @@
+import 'package:copit/AllMenus/app_scaffold.dart';
 import 'package:flutter/material.dart';
 
 class SellProduct extends StatelessWidget {
@@ -17,6 +18,8 @@ class SellProductPage extends StatefulWidget {
 class _SellProductPageState extends State<SellProductPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return AppScaffold(
+      appbarname: 'Sell Product',
+    );
   }
 }

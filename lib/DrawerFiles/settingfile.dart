@@ -20,6 +20,7 @@ class SettingFile extends StatefulWidget {
 }
 
 class _SettingFileState extends State<SettingFile> {
+  int currentindex = 0;
   bool isSwitched = false;
   var textValue = 'Switch is OFF';
 
@@ -69,6 +70,88 @@ class _SettingFileState extends State<SettingFile> {
               images: "assets/images/faq.png",
             ),
           ],
+        ),
+        bottembar: BottomNavigationBar(
+          showUnselectedLabels: true,
+          unselectedItemColor: ColorsConst.PrimryblackColor,
+          selectedItemColor: ColorsConst.PrimryColor,
+          type: BottomNavigationBarType.fixed,
+
+          currentIndex:
+              currentindex, // this will be set when a new tab is tapped
+          items: [
+            BottomNavigationBarItem(
+              icon: currentindex == 0
+                  ? ColorFiltered(
+                      colorFilter: ColorFilter.mode(
+                          ColorsConst.PrimryColor, BlendMode.modulate),
+                      child: Image(
+                        image: AssetImage('assets/images/home.png'),
+                      ),
+                    )
+                  : Image(
+                      image: AssetImage('assets/images/home.png'),
+                    ),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+                icon: currentindex == 1
+                    ? ColorFiltered(
+                        colorFilter: ColorFilter.mode(
+                            ColorsConst.PrimryColor, BlendMode.modulate),
+                        child: Image(
+                          image: AssetImage('assets/images/chat.png'),
+                        ),
+                      )
+                    : Image(
+                        image: AssetImage('assets/images/chat.png'),
+                      ),
+                label: 'Chat'),
+            BottomNavigationBarItem(
+                icon: currentindex == 2
+                    ? ColorFiltered(
+                        colorFilter: ColorFilter.mode(
+                            ColorsConst.PrimryColor, BlendMode.modulate),
+                        child: Image(
+                          image: AssetImage('assets/images/cam.png'),
+                        ),
+                      )
+                    : Image(
+                        image: AssetImage('assets/images/cam.png'),
+                      ),
+                label: 'Camera'),
+            BottomNavigationBarItem(
+                icon: currentindex == 3
+                    ? ColorFiltered(
+                        colorFilter: ColorFilter.mode(
+                            ColorsConst.PrimryColor, BlendMode.modulate),
+                        child: Image(
+                          image: AssetImage('assets/images/profile.png'),
+                        ),
+                      )
+                    : Image(
+                        image: AssetImage('assets/images/profile.png'),
+                      ),
+                label: 'Profile'),
+            BottomNavigationBarItem(
+                icon: currentindex == 4
+                    ? ColorFiltered(
+                        colorFilter: ColorFilter.mode(
+                            ColorsConst.PrimryColor, BlendMode.modulate),
+                        child: Image(
+                          image: AssetImage('assets/images/cart.png'),
+                        ),
+                      )
+                    : Image(
+                        image: AssetImage('assets/images/cart.png'),
+                      ),
+                label: 'Cart'),
+          ],
+          onTap: (value) {
+            setState(() {
+              currentindex = value;
+            });
+          },
         ));
   }
 }

@@ -1,3 +1,4 @@
+import 'package:copit/AllMenus/app_scaffold.dart';
 import 'package:flutter/material.dart';
 
 class MyProduct extends StatelessWidget {
@@ -17,10 +18,8 @@ class MyProductpage extends StatefulWidget {
 class _MyProductpageState extends State<MyProductpage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text(
-        'Hello mukesh and jay',
-      ),
+    return AppScaffold(
+      appbarname: 'My product',
     );
   }
 }

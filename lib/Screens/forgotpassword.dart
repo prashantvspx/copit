@@ -7,6 +7,7 @@ import 'package:copit/spacing.dart';
 import 'package:copit/textStyle.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class EnterNumber extends StatelessWidget {
   @override
@@ -70,6 +71,8 @@ class _EnterOtpNumberClassState extends State<EnterOtpNumberClass> {
                 padding: const EdgeInsets.only(
                     left: Spacings.large, right: Spacings.large),
                 child: CustomTextfeild(
+                  numlength: [LengthLimitingTextInputFormatter(10)],
+                  keybordstype: TextInputType.number,
                   hintText: "Enter Your Number",
                 ),
               ),

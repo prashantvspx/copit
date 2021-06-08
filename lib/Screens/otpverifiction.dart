@@ -2,7 +2,9 @@ import 'package:copit/Colors.dart';
 import 'package:copit/Screens/createnewpassword.dart';
 import 'package:copit/custombuttion.dart';
 import 'package:copit/images.dart';
+import 'package:copit/spacing.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pin_put/pin_put.dart';
 
 class Otppage extends StatelessWidget {
   @override
@@ -19,6 +21,13 @@ class MyOtpvar extends StatefulWidget {
 }
 
 class _MyOtpvarState extends State<MyOtpvar> {
+  final _pinPutController = TextEditingController();
+  final _pinPutFocusNode = FocusNode();
+
+  final BoxDecoration pinPutDecoration = BoxDecoration(
+      border: Border.all(color: Colors.deepPurpleAccent),
+      borderRadius: BorderRadius.circular(15.0));
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +52,6 @@ class _MyOtpvarState extends State<MyOtpvar> {
                     alignment: Alignment.bottomCenter,
                     child: Image.asset(
                       'assets/images/vectorSmartObject.png',
-                      // fit: BoxFit.fitHeight,
                     )),
               ),
               Padding(
@@ -57,76 +65,24 @@ class _MyOtpvarState extends State<MyOtpvar> {
                 padding: EdgeInsets.only(top: 10, bottom: 20),
                 child: Text('Enter the OTP sent to +919876543210'),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  SizedBox(
-                    width: 60,
-                    child: TextFormField(
-                      showCursor: false,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        fillColor: ColorsConst.edittxtbgColor,
-                        filled: true,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(35),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 60,
-                    child: TextFormField(
-                      showCursor: false,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        fillColor: ColorsConst.edittxtbgColor,
-                        filled: true,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(35),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 60,
-                    child: TextFormField(
-                      showCursor: false,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        fillColor: ColorsConst.edittxtbgColor,
-                        filled: true,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(35),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 60,
-                    child: TextFormField(
-                      showCursor: false,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        fillColor: ColorsConst.edittxtbgColor,
-                        filled: true,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(35),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+
+              PinPut(
+                fieldsCount: 4,
+                submittedFieldDecoration: pinPutDecoration,
+                fieldsAlignment: MainAxisAlignment.spaceAround,
+                textStyle: const TextStyle(fontSize: 25.0, color: Colors.black),
+                eachFieldWidth: Spacings.xxxLarge,
+                eachFieldHeight: Spacings.xxxLarge,
+                followingFieldDecoration: pinPutDecoration,
+                focusNode: _pinPutFocusNode,
+                controller: _pinPutController,
               ),
-              // SizedBox(
-              //   width: MediaQuery.of(context).size.width,
-              //   height: 50,
-              //   child:
+
               Padding(
                 padding: EdgeInsets.fromLTRB(8, 20, 8, 20),
                 child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
-                  height: 50,
+                  height: MediaQuery.of(context).size.width / 15,
                   onPressed: () {
                     showDialog(
                         context: context,

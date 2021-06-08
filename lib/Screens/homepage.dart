@@ -1,19 +1,14 @@
-import 'dart:ffi';
-
-import 'package:copit/AllMenus/a.dart';
-import 'package:copit/AllMenus/app_card.dart';
-import 'package:copit/AllMenus/bottomnavmenu.dart';
 import 'package:copit/AllMenus/customappbar.dart';
+import 'package:copit/AllMenus/drawerfile.dart';
 import 'package:copit/Colors.dart';
-import 'package:copit/DrawerFiles/settingfile.dart';
 import 'package:copit/HomePageScreen/cameraspages.dart';
 import 'package:copit/HomePageScreen/cartspages.dart';
 import 'package:copit/HomePageScreen/chatpages.dart';
 import 'package:copit/HomePageScreen/homespages.dart';
 import 'package:copit/HomePageScreen/profilespages.dart';
+import 'package:copit/Screens/notificationpage.dart';
 import 'package:copit/spacing.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class HomePage_drawer extends StatelessWidget {
   @override
@@ -36,6 +31,7 @@ class _HomePagesState extends State<HomePages> {
   List<Widget> _widgetOptions = [
     MainHomePage(),
     Chatpage(),
+    // HelpDaskPage(),
     CameraClass(),
     ProfileClass(),
     Cartpage(),
@@ -72,6 +68,7 @@ class _HomePagesState extends State<HomePages> {
                 hintText: title,
               ),
               preferredSize: Size.fromHeight(Spacings.xxxxLarge)),
+      drawer: DrawerFile(),
       body: _widgetOptions[currentindex],
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
@@ -198,7 +195,12 @@ class _HomePagesState extends State<HomePages> {
           Padding(
             padding: EdgeInsets.only(right: Spacings.medium),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notification_Page()));
+              },
               child: ImageIcon(
                 AssetImage("assets/images/noti.png"),
                 size: Spacings.large,

@@ -21,6 +21,7 @@ class _AppBarCustomState extends State<AppBarCustom> {
       ),
       backgroundColor: Colors.transparent,
       elevation: 0,
+      leadingWidth: 30,
       leading: GestureDetector(
         onTap: () {
           Navigator.pop(context);

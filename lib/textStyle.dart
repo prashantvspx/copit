@@ -64,7 +64,7 @@ class TextStyles {
     // fontFamily: 'Poppins',
     // letterSpacing: 0.2,
     fontFamily: 'HelveticaNowDisplay',
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.normal,
   );
   static TextStyle gridtextstyle = TextStyle(
     color: ColorsConst.fontcolorblck,
@@ -86,4 +86,30 @@ class TextStyles {
     letterSpacing: 0.5,
     fontFamily: 'HelveticaNowDisplay',
   );
+
+  static TextStyle helptext = TextStyle(
+    color: ColorsConst.fontcolorblck,
+    fontSize: Spacings.smedium,
+    letterSpacing: 0.28,
+    fontFamily: 'HelveticaNowDisplay',
+  );
+
+  static TextStyle AamountText = TextStyle(
+    color: ColorsConst.neioncolor,
+    fontSize: Spacings.large,
+    fontFamily: 'HelveticaNowDisplay',
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle paytext = TextStyle(
+    color: ColorsConst.White,
+    fontSize: Spacings.smedium,
+    fontFamily: 'HelveticaNowDisplay',
+    fontWeight: FontWeight.normal,
+  );
+  static TextStyle pertext = TextStyle(
+      color: ColorsConst.White,
+      fontSize: Spacings.smedium,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.14);
 }

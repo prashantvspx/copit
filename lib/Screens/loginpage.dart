@@ -1,6 +1,7 @@
 import 'package:copit/Colors.dart';
 import 'package:copit/Screens/SignIn.dart';
 import 'package:copit/Screens/forgotpassword.dart';
+import 'package:copit/Screens/homepage.dart';
 import 'package:copit/Screens/otpverifiction.dart';
 import 'package:copit/custom_textfiled.dart';
 import 'package:copit/custombuttion.dart';
@@ -70,12 +71,20 @@ class _LoginpageClassState extends State<LoginpageClass> {
                       child: Padding(
                         padding: const EdgeInsets.only(
                             right: Spacings.medium, top: Spacings.large),
-                        child: Text(
-                          'Forgot password ?',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: Spacings.medium),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => EnterNumber()));
+                          },
+                          child: Text(
+                            'Forgot password ?',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                fontSize: Spacings.medium),
+                          ),
                         ),
                       ),
                     ),
@@ -86,12 +95,12 @@ class _LoginpageClassState extends State<LoginpageClass> {
                     ButtonPrimary(
                       trailing: ImageAssets.backleftLogos(),
                       enabled: true,
-                      text: 'SIGN UP',
+                      text: 'SIGN IN',
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => EnterNumber()));
+                                builder: (context) => HomePages()));
                       },
                     ),
                     // Text4

@@ -27,163 +27,169 @@ class SignInClass extends StatefulWidget {
 class _SignInClassState extends State<SignInClass> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmpasswordController = TextEditingController();
+
+  bool checkdata = false;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        child: Scaffold(
-          body: Stack(
-            children: [
-              Container(
-                child: AppBar(
-                    backgroundColor: Colors.white,
-                    leading: ImageIcon(
-                      AssetImage("assets/images/artwork.png"),
-                      color: Colors.black,
-                    )),
-              ),
-              Container(
-                child: SingleChildScrollView(
-                  child: Container(
-                    padding: EdgeInsets.all(10),
-                    child: Form(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Padding(
-                              padding: EdgeInsets.only(top: Spacings.medium)),
-                          ImageAssets.AppLogos(),
-                          SizedBox(
-                            height: Spacings.medium,
-                          ),
-                          Text(
-                            'Please create in account',
-                            style: TextStyle(
-                                height: 2,
-                                fontSize: 14,
-                                letterSpacing: 0.24,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.normal),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                                top: Spacings.xxLarge,
-                                left: Spacings.large,
-                                right: Spacings.large),
-                            child: DropdownButtonFormField(
-                              items: [
-                                // Create in diffrent screen and then call Hre.
-                                DropdownMenuItem(
-                                  child: Text('University school'),
-                                  value: '1',
-                                ),
-                                DropdownMenuItem(
-                                  child: Text('University school'),
-                                  value: '2',
-                                ),
-                                DropdownMenuItem(
-                                  child: Text('University school'),
-                                  value: '3',
-                                ),
-                              ],
-                              onChanged: (value) {},
-                              decoration: InputDecoration(
-                                fillColor: ColorsConst.edittxtbgColor,
-                                filled: true,
-                                //  contentPadding:
-                                //EdgeInsets.fromLTRB(15, 15, 15, 15),
-                                // hintText: 'Email',
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
+    return Scaffold(
+      appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          leading: GestureDetector(
+            onTap: () {
+              // Navigator.pop(context);
+            },
+            child: ImageIcon(
+              AssetImage("assets/images/artwork.png"),
+              color: Colors.black,
+            ),
+          )),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              child: SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  child: Form(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(padding: EdgeInsets.only(top: Spacings.medium)),
+                        ImageAssets.AppLogos(),
+                        SizedBox(
+                          height: Spacings.medium,
+                        ),
+                        Text(
+                          'Please create in account',
+                          style: TextStyle(
+                              height: 2,
+                              fontSize: 14,
+                              letterSpacing: 0.24,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.normal),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: Spacings.xxLarge,
+                              left: Spacings.large,
+                              right: Spacings.large),
+                          child: DropdownButtonFormField(
+                            items: [
+                              // Create in diffrent screen and then call Hre.
+                              DropdownMenuItem(
+                                child: Text('University school'),
+                                value: '1',
                               ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: Spacings.medium,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: Spacings.xxmedium,
-                                left: Spacings.large,
-                                right: Spacings.large),
-                            child: CustomTextfeild(
-                              hintText: "Password",
-                              isPassword: true,
-                              controller: passwordController,
-                            ),
-                          ),
-                          SizedBox(
-                            height: Spacings.xxmedium,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: Spacings.medium,
-                                left: Spacings.large,
-                                right: Spacings.large),
-                            child: CustomTextfeild(
-                              hintText: "Confirm Password",
-                              isPassword: true,
-                              controller: passwordController,
-                            ),
-                          ),
-                          SizedBox(
-                            height: Spacings.large,
-                          ),
-                          Row(
-                            children: [
-                              Checkbox(
-                                value: true,
-                                onChanged: (a) {},
+                              DropdownMenuItem(
+                                child: Text('University school'),
+                                value: '2',
                               ),
-                              Expanded(
-                                  child: getLegalSentenceRichTextWidget(
-                                      context: context)),
+                              DropdownMenuItem(
+                                child: Text('University school'),
+                                value: '3',
+                              ),
                             ],
+                            onChanged: (value) {},
+                            decoration: InputDecoration(
+                              fillColor: ColorsConst.edittxtbgColor,
+                              filled: true,
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                            ),
                           ),
-                          SizedBox(
-                            height: Spacings.xLarge,
+                        ),
+                        SizedBox(
+                          height: Spacings.medium,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: Spacings.xxmedium,
+                              left: Spacings.large,
+                              right: Spacings.large),
+                          child: CustomTextfeild(
+                            hintText: "Password",
+                            isPassword: true,
+                            controller: passwordController,
                           ),
-                          ButtonPrimary(
-                            trailing: ImageAssets.backleftLogos(),
-                            enabled: true,
-                            text: 'SIGN UP',
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => LoginPage()));
-                            },
+                        ),
+                        SizedBox(
+                          height: Spacings.xxmedium,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: Spacings.medium,
+                              left: Spacings.large,
+                              right: Spacings.large),
+                          child: CustomTextfeild(
+                            hintText: "Confirm Password",
+                            isPassword: true,
+                            controller: passwordController,
                           ),
-                          SizedBox(
-                            height: Spacings.xxxxLarge,
-                          ),
-                          RichText(
-                            textAlign: TextAlign.center,
-                            text: TextSpan(
-                                text: 'Already have an Account ? ',
-                                style: TextStyle(
-                                    color: Colors.black, fontFamily: 'Poppins'),
-                                children: [
-                                  TextSpan(
-                                    text: 'Sign in',
-                                    style: TextStyle(
-                                        color: ColorsConst.PrimryColor,
-                                        fontFamily: 'Poppins',
-                                        fontSize: 17,
-                                        decoration: TextDecoration.underline),
-                                  )
-                                ]),
-                          ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(
+                          height: Spacings.large,
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                              side: BorderSide(width: 0.8),
+                              value: checkdata,
+                              onChanged: (a) {
+                                checkdata = a!;
+                                setState(() {});
+                              },
+                            ),
+                            Expanded(
+                                child: getLegalSentenceRichTextWidget(
+                                    context: context)),
+                          ],
+                        ),
+                        SizedBox(
+                          height: Spacings.xLarge,
+                        ),
+                        ButtonPrimary(
+                          trailing: ImageAssets.backleftLogos(),
+                          enabled: true,
+                          text: 'SIGN UP',
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginPage()));
+                          },
+                        ),
+                        SizedBox(
+                          height: Spacings.xxxxLarge,
+                        ),
+                        RichText(
+                          textAlign: TextAlign.center,
+                          text: TextSpan(
+                              text: 'Already have an Account ? ',
+                              style: TextStyle(
+                                  color: Colors.black, fontFamily: 'Poppins'),
+                              children: [
+                                TextSpan(
+                                  text: 'Sign up',
+                                  style: TextStyle(
+                                      color: ColorsConst.PrimryColor,
+                                      fontFamily: 'Poppins',
+                                      fontSize: 13,
+                                      decoration: TextDecoration.underline),
+                                )
+                              ]),
+                        ),
+                      ],
                     ),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -216,26 +222,13 @@ class _SignInClassState extends State<SignInClass> {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- //   AppNavigatorFuelLib().navigateToAppWebView(
-                    //       context: context,
-                    //       themeData: ThemeUtilsWhitelabel.getThemeData(),
-                    //       headers: UrlUtils.getWebLinkHeader(
-                    //           acceptLanguage:
-                    //               appLocalisations.locale.languageCode),
-                    //       url: UrlUtils.getWebRedirectUrl(
-                    //           tag: UrlUtils.tagDataPolicies,
-                    //           providerId: Config.providerId));
-                    // }),
+//   AppNavigatorFuelLib().navigateToAppWebView(
+//       context: context,
+//       themeData: ThemeUtilsWhitelabel.getThemeData(),
+//       headers: UrlUtils.getWebLinkHeader(
+//           acceptLanguage:
+//               appLocalisations.locale.languageCode),
+//       url: UrlUtils.getWebRedirectUrl(
+//           tag: UrlUtils.tagDataPolicies,
+//           providerId: Config.providerId));
+// }),

@@ -5,6 +5,8 @@ class Spacings {
 
   /// medium
   static const double medium = 12;
+
+  static const double smedium = 14;
   static const double xmedium = 16;
   static const double xxmedium = 19;
 
@@ -15,6 +17,8 @@ class Spacings {
 
   /// xLarge
   static const double xLarge = 32;
+
+  static const double xlarge = 36;
 
   /// xxLarge
   static const double xxLarge = 40;

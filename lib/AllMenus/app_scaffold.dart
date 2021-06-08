@@ -8,8 +8,10 @@ class AppScaffold extends StatefulWidget {
   final String? appbarname;
   final Widget? appbarimg;
   final Widget? body;
+  final Widget? bottembar;
 
-  AppScaffold({@required this.appbarname, this.appbarimg, this.body});
+  AppScaffold(
+      {@required this.appbarname, this.appbarimg, this.body, this.bottembar});
   @override
   _AppScaffoldState createState() => _AppScaffoldState();
 }
@@ -71,6 +73,7 @@ class _AppScaffoldState extends State<AppScaffold> {
             ),
           ]),
       body: widget.body ?? Offstage(),
+      bottomNavigationBar: widget.bottembar ?? Offstage(),
     );
   }
 }
