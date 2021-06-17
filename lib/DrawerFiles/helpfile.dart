@@ -1,7 +1,5 @@
 import 'package:copit/AllMenus/app_scaffold.dart';
 import 'package:copit/Colors.dart';
-import 'package:copit/custom_textfiled.dart';
-import 'package:copit/custombuttion.dart';
 import 'package:copit/spacing.dart';
 import 'package:copit/textStyle.dart';
 import 'package:flutter/material.dart';

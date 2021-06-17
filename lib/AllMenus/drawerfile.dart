@@ -1,9 +1,12 @@
 import 'package:copit/Colors.dart';
+import 'package:copit/DrawerFiles/dashboardpage.dart';
 import 'package:copit/DrawerFiles/helpfile.dart';
 import 'package:copit/DrawerFiles/myproduct.dart';
 import 'package:copit/DrawerFiles/payment.dart';
 import 'package:copit/DrawerFiles/sellproduct.dart';
 import 'package:copit/DrawerFiles/settingfile.dart';
+import 'package:copit/Screens/SellProduct/firstpage.dart';
+import 'package:copit/Screens/SellProduct/fourthpage.dart';
 import 'package:copit/spacing.dart';
 import 'package:flutter/material.dart';
 
@@ -79,6 +82,8 @@ class DrawerFile extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => DashboardPage()));
               },
             ),
             ListTile(
@@ -98,8 +103,8 @@ class DrawerFile extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => SellProduct()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TimeLine_AddProduct()));
               },
             ),
             ListTile(

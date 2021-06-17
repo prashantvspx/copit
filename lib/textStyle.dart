@@ -8,61 +8,46 @@ class TextStyles {
     color: ColorsConst.PrimryColor,
     fontSize: 13,
     fontFamily: 'Poppins',
-    //  fontWeight: FontWeight.w700,
-    // fontStyle: FontStyle.normal,
-    // height: 1.0833333333333333,
   );
   static TextStyle headingBigBlack = TextStyle(
     color: ColorsConst.PrimryblackColor,
     fontSize: 13,
     letterSpacing: 0.2,
     fontFamily: 'Poppins',
-    //  height: 0.8333333333333334
-    //  fontWeight: FontWeight.w700,
-    // fontStyle: FontStyle.normal,
-    // height: 19.2,
   );
 
   static TextStyle ButtionPrimaryStyle = TextStyle(
     color: ColorsConst.White,
     fontSize: Spacings.xmedium,
     fontFamily: 'Poppins',
-    //  fontWeight: FontWeight.w700,
-    // fontStyle: FontStyle.normal,
-    // height: 0.8333333333333334,
   );
-
+  static TextStyle ButtionPrimaryStyletwo = TextStyle(
+    color: ColorsConst.PrimryblackColor,
+    fontSize: Spacings.xmedium,
+    fontFamily: 'Poppins',
+  );
   static TextStyle RoundPrimaryStyle = TextStyle(
     color: ColorsConst.White,
     fontSize: 13,
     fontFamily: 'Poppins',
-    //  fontWeight: FontWeight.w700,
-    // fontStyle: FontStyle.normal,
-    // height: 0.8333333333333334,
   );
 
   static TextStyle BtnPrimaryStyle = TextStyle(
     color: ColorsConst.White,
     fontSize: 16,
     fontFamily: 'Poppins',
-    //  fontWeight: FontWeight.w700,
-    // fontStyle: FontStyle.normal,
-    // height: 0.8333333333333334,
   );
   static TextStyle textstylebc = TextStyle(
     color: ColorsConst.PrimryblackColor,
-    fontSize: Spacings.xLarge,
+    //fontSize: Spacings.xmedium,
     fontFamily: 'Poppins',
     // letterSpacing: 0.2,
     // fontFamily: 'HelveticaNowDisplay',
-    fontWeight: FontWeight.bold,
   );
 
   static TextStyle cardstylebx = TextStyle(
     color: ColorsConst.fontcolorblck,
     fontSize: Spacings.xmedium,
-    // fontFamily: 'Poppins',
-    // letterSpacing: 0.2,
     fontFamily: 'HelveticaNowDisplay',
     fontWeight: FontWeight.normal,
   );
@@ -100,6 +85,12 @@ class TextStyles {
     fontFamily: 'HelveticaNowDisplay',
     fontWeight: FontWeight.bold,
   );
+  static TextStyle addproductText = TextStyle(
+    color: ColorsConst.PrimryblackColor,
+    fontSize: Spacings.large,
+    fontFamily: 'HelveticaNowDisplay',
+    fontWeight: FontWeight.bold,
+  );
 
   static TextStyle paytext = TextStyle(
     color: ColorsConst.White,
@@ -112,4 +103,44 @@ class TextStyles {
       fontSize: Spacings.smedium,
       fontFamily: 'HelveticaNowDisplay',
       letterSpacing: 0.14);
+
+  static TextStyle sellproduct_checkbox = TextStyle(
+      color: ColorsConst.fontcolorblck,
+      fontSize: Spacings.smedium,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.28);
+
+  static TextStyle sellproduct_price = TextStyle(
+      color: ColorsConst.pricecolor,
+      fontSize: Spacings.smedium,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.28);
+
+  static AppBar buildappbar({String? title, BuildContext? context}) {
+    return AppBar(
+        title: Text(
+          title ?? '-',
+          style: TextStyle(color: ColorsConst.PrimryblackColor),
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leadingWidth: 30,
+        leading: Builder(
+          builder: (context) {
+            return Padding(
+              padding: const EdgeInsets.only(left: Spacings.medium),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Image.asset(
+                  'assets/images/artwork.png',
+                ),
+              ),
+            );
+          },
+
+          // child:
+        ));
+  }
 }

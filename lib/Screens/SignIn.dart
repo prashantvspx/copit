@@ -125,7 +125,7 @@ class _SignInClassState extends State<SignInClass> {
                           child: CustomTextfeild(
                             hintText: "Confirm Password",
                             isPassword: true,
-                            controller: passwordController,
+                            controller: confirmpasswordController,
                           ),
                         ),
                         SizedBox(

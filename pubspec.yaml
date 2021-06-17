@@ -20,6 +20,11 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
+flutter_icons:
+    android: "launcher_icon"
+    ios: true
+    image_path: "assets/images/cop_logo.png"
+
 dependencies:
   flutter:
     sdk: flutter
@@ -27,8 +32,14 @@ dependencies:
   flutter_zoom_drawer: ^2.0.2+3
   flutter_platform_widgets: ^1.0.1-nullsafety.0
   provider: ^5.0.0
-  easy_localization: ^3.0.0
+  # easy_localization: ^3.0.0
   pinput: ^1.2.0
+  dotted_border: ^2.0.0
+  smooth_page_indicator: ^0.3.0-nullsafety.0
+  shared_preferences: ^2.0.6
+  flutter_launcher_icons: ^0.8.0
+
+  
 
 
 

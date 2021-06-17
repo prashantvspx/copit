@@ -22,8 +22,18 @@ class ColorsConst {
   static Color Whitelight = Color.fromRGBO(255, 255, 255, 0.8);
   static Color bclight = Color.fromRGBO(188, 188, 188, 0.8);
   static Color listfirst = Color.fromRGBO(219, 199, 243, 1.0);
-
+  static Color pricecolor = Color.fromRGBO(94, 90, 94, 1.0);
   static Color secfirst = Color.fromRGBO(243, 236, 202, 1.0);
   static Color thirdfirst = Color.fromRGBO(194, 220, 188, 1.0);
   static Color foursirst = Color.fromRGBO(216, 215, 216, 1.0);
+  static Color sellproduct_check_bgcolor = Color.fromRGBO(243, 209, 251, 1.0);
+  static Color sellpro_pay_bcg = Color.fromRGBO(248, 246, 237, 1.0);
+  static Color sellpro_border_bcg = Color.fromRGBO(192, 171, 69, 1.0);
+  static Color btn_border_bcg = Color.fromRGBO(229, 228, 229, 1.0);
+  static Color dashbordnotebook = Color.fromRGBO(197, 190, 156, 1.0);
+  static Color dashkitchen = Color.fromRGBO(224, 206, 122, 1.0);
+  static Color dashElectronics = Color.fromRGBO(203, 161, 235, 1.0);
+  static Color dashDorm = Color.fromRGBO(135, 197, 142, 1.0);
+  static Color dashcard = Color.fromRGBO(224, 223, 223, 1.0);
+  static Color dashbrand = Color.fromRGBO(236, 236, 236, 1.0);
 }

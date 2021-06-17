@@ -26,7 +26,8 @@ class _AppCardState extends State<AppCard> {
               borderSide: BorderSide.none),
           child: Container(
               width: double.infinity,
-              height: 68,
+              //  height: ,
+              height: MediaQuery.of(context).size.height / 12,
               padding: EdgeInsets.symmetric(
                   horizontal: Spacings.xxmedium, vertical: Spacings.slarge),
               decoration: BoxDecoration(
