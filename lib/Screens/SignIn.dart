@@ -12,9 +12,8 @@ import 'loginpage.dart';
 class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SignInClass(),
+    return Scaffold(
+      body: SignInClass(),
     );
   }
 }
@@ -27,22 +26,33 @@ class SignInClass extends StatefulWidget {
 class _SignInClassState extends State<SignInClass> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmpasswordController = TextEditingController();
-
+  late String dropdownValue = 'University school';
+  List<String> ListDroupdown = [
+    "University school",
+    "University school 1",
+    "University school 2",
+    "University school 3",
+  ];
   bool checkdata = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.white,
-          leading: GestureDetector(
-            onTap: () {
-              // Navigator.pop(context);
+          backgroundColor: Colors.transparent,
+          leading: Builder(
+            builder: (context) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: ImageIcon(
+                  AssetImage("assets/images/artwork.png"),
+                  color: Colors.black,
+                ),
+              );
             },
-            child: ImageIcon(
-              AssetImage("assets/images/artwork.png"),
-              color: Colors.black,
-            ),
           )),
       body: SingleChildScrollView(
         child: Column(
@@ -75,21 +85,20 @@ class _SignInClassState extends State<SignInClass> {
                               left: Spacings.large,
                               right: Spacings.large),
                           child: DropdownButtonFormField(
-                            items: [
-                              // Create in diffrent screen and then call Hre.
-                              DropdownMenuItem(
-                                child: Text('University school'),
-                                value: '1',
-                              ),
-                              DropdownMenuItem(
-                                child: Text('University school'),
-                                value: '2',
-                              ),
-                              DropdownMenuItem(
-                                child: Text('University school'),
-                                value: '3',
-                              ),
-                            ],
+                            value: dropdownValue,
+                            items: ListDroupdown.isEmpty
+                                ? [
+                                    DropdownMenuItem(
+                                      child: Text('No data'),
+                                      value: "No data",
+                                    )
+                                  ]
+                                : ListDroupdown.map((e) {
+                                    return DropdownMenuItem(
+                                      child: Text(e),
+                                      value: e,
+                                    );
+                                  }).toList(),
                             onChanged: (value) {},
                             decoration: InputDecoration(
                               fillColor: ColorsConst.edittxtbgColor,
@@ -131,7 +140,19 @@ class _SignInClassState extends State<SignInClass> {
                         SizedBox(
                           height: Spacings.large,
                         ),
+                        // CheckboxListTile(
+                        //   value: checkdata,
+                        //   onChanged: (value) {
+                        //     checkdata = value!;
+                        //     setState(() {});
+                        //   },
+                        //   title:
+                        //       getLegalSentenceRichTextWidget(context: context),
+                        //   controlAffinity: ListTileControlAffinity.leading,
+
+                        // ),
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Checkbox(
                               shape: RoundedRectangleBorder(

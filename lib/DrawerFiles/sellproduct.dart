@@ -1,9 +1,4 @@
-import 'package:copit/AllMenus/app_scaffold.dart';
 import 'package:copit/Colors.dart';
-import 'package:copit/Screens/SellProduct/firstpage.dart';
-import 'package:copit/Screens/SellProduct/seceondpage.dart';
-import 'package:copit/Screens/SignIn.dart';
-import 'package:copit/Screens/homepage.dart';
 import 'package:copit/custombuttion.dart';
 import 'package:copit/images.dart';
 import 'package:copit/spacing.dart';
@@ -83,10 +78,6 @@ class _SellProductPageState extends State<SellProductPage> {
                         text: 'Back',
                         onTap: () {
                           widget.Firstpage();
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (context) => HomePages()));
                         },
                       ),
                       SizedBox(
@@ -99,11 +90,6 @@ class _SellProductPageState extends State<SellProductPage> {
                         trailing: ImageAssets.backleftLogos(),
                         onTap: () {
                           widget.Seceondpage();
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (context) =>
-                          //             Add_Product_Sec_Page()));
                         },
                       ),
                     ],

@@ -1,8 +1,6 @@
 import 'package:copit/AllMenus/app_card.dart';
 import 'package:copit/AllMenus/app_scaffold.dart';
 import 'package:copit/Colors.dart';
-import 'package:copit/images.dart';
-import 'package:copit/spacing.dart';
 import 'package:flutter/material.dart';
 
 class SettingPage extends StatelessWidget {

@@ -32,7 +32,7 @@ class _HomePagesState extends State<HomePages> {
     MainHomePage(),
     Chatpage(),
     // HelpDaskPage(),
-    CameraClass(),
+    CameraApp(),
     ProfileClass(),
     Cartpage(),
   ];

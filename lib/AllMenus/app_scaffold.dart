@@ -9,9 +9,14 @@ class AppScaffold extends StatefulWidget {
   final Widget? appbarimg;
   final Widget? body;
   final Widget? bottembar;
+  final Widget? flotingaction;
 
   AppScaffold(
-      {@required this.appbarname, this.appbarimg, this.body, this.bottembar});
+      {@required this.appbarname,
+      this.appbarimg,
+      this.body,
+      this.bottembar,
+      this.flotingaction});
   @override
   _AppScaffoldState createState() => _AppScaffoldState();
 }
@@ -19,6 +24,7 @@ class AppScaffold extends StatefulWidget {
 class _AppScaffoldState extends State<AppScaffold> {
   @override
   Widget build(BuildContext context) {
+    // careat custom scaffold then so add all page Scaffold to this name AddScaffold So add Locol thing here
     return Scaffold(
       appBar: AppBar(
           title: Text(
@@ -74,6 +80,7 @@ class _AppScaffoldState extends State<AppScaffold> {
           ]),
       body: widget.body ?? Offstage(),
       bottomNavigationBar: widget.bottembar ?? Offstage(),
+      floatingActionButton: widget.flotingaction ?? Offstage(),
     );
   }
 }

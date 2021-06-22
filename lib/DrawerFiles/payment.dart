@@ -267,9 +267,10 @@ class _MyPaymentpageState extends State<MyPaymentpage> {
                                 ),
                                 contentPadding: EdgeInsets.all(8),
                                 content: Container(
-                                  height: 160,
+                                  height:
+                                      160, //give temp size when app live or api call that timer changes
                                   width: 200,
-                                  //width: MediaQuery.of(context).size.width,
+
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -338,7 +339,6 @@ class _MyPaymentpageState extends State<MyPaymentpage> {
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(Spacings.large),
-                      //side: BorderSide(color: ColorsConst.btnbgColor, width: 3),
                     ),
                     minWidth: MediaQuery.of(context).size.width / 2.3,
                   ),

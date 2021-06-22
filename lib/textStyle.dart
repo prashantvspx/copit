@@ -39,15 +39,20 @@ class TextStyles {
   );
   static TextStyle textstylebc = TextStyle(
     color: ColorsConst.PrimryblackColor,
-    //fontSize: Spacings.xmedium,
+    fontSize: Spacings.xmedium,
     fontFamily: 'Poppins',
-    // letterSpacing: 0.2,
-    // fontFamily: 'HelveticaNowDisplay',
+    letterSpacing: 0.2,
   );
 
   static TextStyle cardstylebx = TextStyle(
     color: ColorsConst.fontcolorblck,
     fontSize: Spacings.xmedium,
+    fontFamily: 'HelveticaNowDisplay',
+    fontWeight: FontWeight.normal,
+  );
+  static TextStyle cardheadphone = TextStyle(
+    color: ColorsConst.fontcolorblck,
+    fontSize: Spacings.xxmedium,
     fontFamily: 'HelveticaNowDisplay',
     fontWeight: FontWeight.normal,
   );
@@ -85,6 +90,25 @@ class TextStyles {
     fontFamily: 'HelveticaNowDisplay',
     fontWeight: FontWeight.bold,
   );
+
+  static TextStyle product_box_txt = TextStyle(
+    color: ColorsConst.prod_box_txt,
+    fontSize: Spacings.smedium,
+    fontFamily: 'HelveticaNowDisplay',
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle product_box_txt_sec = TextStyle(
+    color: ColorsConst.prod_box_txt_color,
+    fontSize: Spacings.smedium,
+    fontFamily: 'HelveticaNowDisplay',
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle Aamount_small_Text = TextStyle(
+    color: ColorsConst.neioncolor,
+    fontSize: Spacings.smedium,
+    fontFamily: 'HelveticaNowDisplay',
+    fontWeight: FontWeight.bold,
+  );
   static TextStyle addproductText = TextStyle(
     color: ColorsConst.PrimryblackColor,
     fontSize: Spacings.large,
@@ -104,15 +128,85 @@ class TextStyles {
       fontFamily: 'HelveticaNowDisplay',
       letterSpacing: 0.14);
 
+  static TextStyle Header_File = TextStyle(
+      color: ColorsConst.PrimryblackColor,
+      fontSize: Spacings.xlarge,
+      fontWeight: FontWeight.w900,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.14);
+  static TextStyle Header_File_s_size = TextStyle(
+      color: ColorsConst.PrimryblackColor,
+      fontSize: Spacings.xxmedium,
+      fontWeight: FontWeight.w900,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.14);
+  static TextStyle Header_File_m_size = TextStyle(
+      color: ColorsConst.PrimryblackColor,
+      fontSize: Spacings.large,
+      fontWeight: FontWeight.w900,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.14);
+
   static TextStyle sellproduct_checkbox = TextStyle(
       color: ColorsConst.fontcolorblck,
       fontSize: Spacings.smedium,
       fontFamily: 'HelveticaNowDisplay',
       letterSpacing: 0.28);
 
+  static TextStyle product_txt = TextStyle(
+      color: ColorsConst.filter_bg_color,
+      decoration: TextDecoration.underline,
+      fontSize: Spacings.smedium,
+      textBaseline: TextBaseline.alphabetic,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.28);
+  static TextStyle orders_txt = TextStyle(
+      color: ColorsConst.PrimryblackColor,
+      fontSize: Spacings.xmedium,
+      textBaseline: TextBaseline.alphabetic,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.28);
+
+  static TextStyle product_price = TextStyle(
+      color: ColorsConst.product_text_color,
+      fontSize: Spacings.xmedium,
+      fontFamily: 'HelveticaNowDisplay',
+      fontWeight: FontWeight.bold,
+      letterSpacing: 0.28);
+
   static TextStyle sellproduct_price = TextStyle(
       color: ColorsConst.pricecolor,
       fontSize: Spacings.smedium,
+      fontFamily: 'HelveticaNowDisplay',
+      fontWeight: FontWeight.bold,
+      letterSpacing: 0.28);
+
+  static TextStyle cart_cart_price = TextStyle(
+      color: ColorsConst.cart_card_text_color,
+      fontSize: Spacings.smedium,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.28);
+
+  static TextStyle cart_cart_block = TextStyle(
+      color: ColorsConst.fontcolorblck,
+      fontSize: Spacings.smedium,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.28);
+
+  static TextStyle product_cat = TextStyle(
+      color: ColorsConst.product_txt,
+      fontSize: Spacings.smedium,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.28);
+  static TextStyle product_del = TextStyle(
+      color: ColorsConst.prod_txt,
+      fontSize: Spacings.smedium,
+      fontFamily: 'HelveticaNowDisplay',
+      letterSpacing: 0.28);
+
+  static TextStyle checkout_text = TextStyle(
+      color: ColorsConst.fontcolorblck,
+      fontSize: Spacings.xmedium,
       fontFamily: 'HelveticaNowDisplay',
       letterSpacing: 0.28);
 
@@ -139,8 +233,6 @@ class TextStyles {
               ),
             );
           },
-
-          // child:
         ));
   }
 }

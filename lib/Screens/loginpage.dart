@@ -8,6 +8,7 @@ import 'package:copit/custombuttion.dart';
 import 'package:copit/images.dart';
 import 'package:copit/spacing.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -52,6 +53,7 @@ class _LoginpageClassState extends State<LoginpageClass> {
                       height: Spacings.medium,
                     ),
                     CustomTextfeild(
+                      keybordstype: TextInputType.emailAddress,
                       hintText: "Email",
                       controller: emailController,
                     ),

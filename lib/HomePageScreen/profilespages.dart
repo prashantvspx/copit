@@ -1,9 +1,7 @@
 import 'package:copit/Colors.dart';
-import 'package:copit/Screens/SignIn.dart';
 import 'package:copit/custom_textfiled.dart';
 import 'package:copit/custombuttion.dart';
 import 'package:copit/customstring.dart';
-import 'package:copit/images.dart';
 import 'package:copit/spacing.dart';
 import 'package:copit/textStyle.dart';
 import 'package:flutter/material.dart';

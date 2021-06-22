@@ -5,6 +5,7 @@ import 'package:copit/Screens/SignIn.dart';
 import 'package:copit/Screens/Signup.dart';
 import 'package:copit/images.dart';
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class SpalshScreen extends StatelessWidget {
   @override
@@ -25,10 +26,12 @@ class _SpalshScreenClassState extends State<SpalshScreenClass> {
   @override
   void initState() {
     super.initState();
-    Timer(
-        Duration(seconds: 5),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SignUpPage())));
+    Timer(Duration(seconds: 5), () async {
+      await Permission.camera.request();
+
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => SignUpPage()));
+    });
   }
 
   @override

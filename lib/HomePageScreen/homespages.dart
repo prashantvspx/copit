@@ -1,6 +1,7 @@
 import 'dart:math';
-
-import 'package:copit/Colors.dart';
+import 'package:copit/DrawerFiles/myproduct.dart';
+import 'package:copit/HomePageScreen/kitchenfile.dart';
+import 'package:copit/myproduct/mobilescreen.dart';
 import 'package:copit/spacing.dart';
 import 'package:copit/textStyle.dart';
 import 'package:flutter/material.dart';
@@ -124,61 +125,83 @@ class _MainHomePagesClassState extends State<MainHomePagesClass> {
                       ],
                     ),
                   ),
-                  Container(
-                    child: Column(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(Spacings.small),
-                          child: Image(
-                            image: AssetImage('assets/images/kitchen.png'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => KitchenPage()));
+                    },
+                    child: Container(
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(Spacings.small),
+                            child: Image(
+                              image: AssetImage('assets/images/kitchen.png'),
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: Spacings.medium,
-                        ),
-                        Text(
-                          'Kitchen',
-                          style: TextStyles.gridtextstyle,
-                        )
-                      ],
+                          SizedBox(
+                            height: Spacings.medium,
+                          ),
+                          Text(
+                            'Kitchen',
+                            style: TextStyles.gridtextstyle,
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    child: Column(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(Spacings.small),
-                          child: Image(
-                            image: AssetImage('assets/images/aceco.png'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MyProduct()));
+                    },
+                    child: Container(
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(Spacings.small),
+                            child: Image(
+                              image: AssetImage('assets/images/aceco.png'),
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: Spacings.medium,
-                        ),
-                        Text(
-                          'Electronics',
-                          style: TextStyles.gridtextstyle,
-                        )
-                      ],
+                          SizedBox(
+                            height: Spacings.medium,
+                          ),
+                          Text(
+                            'Electronics',
+                            style: TextStyles.gridtextstyle,
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    child: Column(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(Spacings.small),
-                          child: Image(
-                            image: AssetImage('assets/images/dron.png'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MobileDeatils()));
+                    },
+                    child: Container(
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(Spacings.small),
+                            child: Image(
+                              image: AssetImage('assets/images/dron.png'),
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: Spacings.medium,
-                        ),
-                        Text(
-                          'Dorm',
-                          style: TextStyles.gridtextstyle,
-                        )
-                      ],
+                          SizedBox(
+                            height: Spacings.medium,
+                          ),
+                          Text(
+                            'Dorm',
+                            style: TextStyles.gridtextstyle,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Center(

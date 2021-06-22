@@ -36,4 +36,13 @@ class ColorsConst {
   static Color dashDorm = Color.fromRGBO(135, 197, 142, 1.0);
   static Color dashcard = Color.fromRGBO(224, 223, 223, 1.0);
   static Color dashbrand = Color.fromRGBO(236, 236, 236, 1.0);
+  static Color cart_card_text_color = Color.fromRGBO(148, 148, 148, 1.0);
+  static Color card_text_color = Color.fromRGBO(242, 242, 242, 1.0);
+  static Color product_text_color = Color.fromRGBO(112, 108, 112, 1.0);
+  static Color filter_bg_color = Color.fromRGBO(192, 91, 216, 1.0);
+  static Color product_txt = Color.fromRGBO(190, 188, 190, 1.0);
+  static Color prod_txt = Color.fromRGBO(125, 120, 125, 1.0);
+  static Color prod_box_bc = Color.fromRGBO(243, 236, 202, 1.0);
+  static Color prod_box_txt = Color.fromRGBO(160, 142, 58, 1.0);
+  static Color prod_box_txt_color = Color.fromRGBO(151, 67, 214, 1.0);
 }

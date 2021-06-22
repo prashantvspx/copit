@@ -1,4 +1,6 @@
 import 'package:copit/Colors.dart';
+import 'package:copit/Screens/SignIn.dart';
+import 'package:copit/Screens/Signup.dart';
 import 'package:copit/Screens/homepage.dart';
 import 'package:copit/custom_textfiled.dart';
 import 'package:copit/custombuttion.dart';
@@ -22,6 +24,7 @@ class CreateNewPassword extends StatefulWidget {
 
 class _CreateNewPasswordState extends State<CreateNewPassword> {
   TextEditingController passwordController = TextEditingController();
+  TextEditingController newpasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +48,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                       child: Text('Create New Password',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: Spacings.medium))),
+                              fontSize: Spacings.xxmedium))),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: Spacings.medium),
@@ -76,7 +79,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     child: Text(
                       'Must be at least 8 characters.',
                       textAlign: TextAlign.left,
-                      style: TextStyle(fontSize: 11),
+                      style: TextStyle(fontSize: Spacings.medium),
                     ),
                   ),
                 ),
@@ -88,7 +91,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                   child: Container(
                     child: CustomTextfeild(
                       hintText: "Confirm Password",
-                      controller: passwordController,
+                      controller: newpasswordController,
                     ),
                   ),
                 ),
@@ -124,8 +127,17 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                                             onTap: () {
                                               Navigator.pop(context);
                                             },
-                                            child: Icon(
-                                              Icons.close,
+                                            child: Container(
+                                              margin: EdgeInsets.all(
+                                                  Spacings.small),
+                                              height: 30,
+                                              width: 30,
+                                              decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  color: ColorsConst.bclight),
+                                              child: Icon(
+                                                Icons.close,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -164,16 +176,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          HomePage_drawer()));
+                                                          SignUpClass()));
                                             },
-                                            // child: GestureDetector(
-                                            //   onTap: () {
-                                            //     Navigator.push(
-                                            //         context,
-                                            //         MaterialPageRoute(
-                                            //             builder: (context) =>
-                                            //                 HomePage()));
-                                            //   },
+
                                             child: Text(
                                               'BACK TO MY APP',
                                               style: TextStyle(

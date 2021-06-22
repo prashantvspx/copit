@@ -4,6 +4,7 @@ import 'package:copit/textStyle.dart';
 import 'package:flutter/material.dart';
 
 class AppCard extends StatefulWidget {
+  //Start All Card From here manage all card from here add anu thing in card then add here
   final String? names;
   final String? images;
   final Widget? leftimages;
@@ -26,7 +27,6 @@ class _AppCardState extends State<AppCard> {
               borderSide: BorderSide.none),
           child: Container(
               width: double.infinity,
-              //  height: ,
               height: MediaQuery.of(context).size.height / 12,
               padding: EdgeInsets.symmetric(
                   horizontal: Spacings.xxmedium, vertical: Spacings.slarge),
@@ -47,9 +47,6 @@ class _AppCardState extends State<AppCard> {
                     children: [
                       Image.asset(
                         widget.images ?? '',
-
-                        //   height: Spacings.large,
-                        //   width: Spacings.large,
                       ),
                       SizedBox(
                         width: Spacings.medium,
@@ -67,12 +64,7 @@ class _AppCardState extends State<AppCard> {
                         width: Spacings.large,
                       ),
                 ],
-              )
-
-              // padding: EdgeInsets.all(Spacings.small),
-              // child: Image.asset('assets/images/dashboard.png'),
-
-              ),
+              )),
         ),
       ),
     );

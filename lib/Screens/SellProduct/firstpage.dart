@@ -1,9 +1,4 @@
-import 'package:copit/AllMenus/app_scaffold.dart';
-import 'package:copit/AllMenus/customappbar.dart';
 import 'package:copit/Colors.dart';
-import 'package:copit/DrawerFiles/sellproduct.dart';
-
-import 'package:copit/Screens/loginpage.dart';
 import 'package:copit/custom_textfiled.dart';
 import 'package:copit/custombuttion.dart';
 import 'package:copit/images.dart';
@@ -234,10 +229,6 @@ class _FirstPage_Sell_ProductState extends State<FirstPage_Sell_Product> {
                         text: 'NEXT',
                         onTap: () {
                           widget.firstpage();
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (context) => SellProduct()));
                         },
                       ),
                     ),

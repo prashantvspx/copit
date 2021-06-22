@@ -1,22 +1,52 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
 
-class Camerapage extends StatelessWidget {
+late List<CameraDescription> cameras;
+
+class CameraApp extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: CameraClass(),
-    );
+  _CameraAppState createState() => _CameraAppState();
+}
+
+class _CameraAppState extends State<CameraApp> {
+  late CameraController controller;
+
+  @override
+  void initState() {
+    Timer(Duration(seconds: 0), () async {
+      
+      cameras = await availableCameras();
+      setState(() {});
+    });
+    // if (cameras!.isNotEmpty) {
+    controller = CameraController(cameras[0], ResolutionPreset.max);
+    controller.initialize().then((_) {
+      if (!mounted) {
+        return;
+      }
+      setState(() {});
+    });
+    // } else {
+    print(cameras);
+    // }
+
+    super.initState();
   }
-}
 
-class CameraClass extends StatefulWidget {
   @override
-  _CameraClassState createState() => _CameraClassState();
-}
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
-class _CameraClassState extends State<CameraClass> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    if (!controller.value.isInitialized) {
+      return Container();
+    }
+    return Scaffold(
+      body: CameraPreview(controller),
+    );
   }
 }

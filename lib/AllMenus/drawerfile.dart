@@ -1,12 +1,12 @@
 import 'package:copit/Colors.dart';
 import 'package:copit/DrawerFiles/dashboardpage.dart';
 import 'package:copit/DrawerFiles/helpfile.dart';
+import 'package:copit/DrawerFiles/myorder.dart';
 import 'package:copit/DrawerFiles/myproduct.dart';
 import 'package:copit/DrawerFiles/payment.dart';
-import 'package:copit/DrawerFiles/sellproduct.dart';
 import 'package:copit/DrawerFiles/settingfile.dart';
-import 'package:copit/Screens/SellProduct/firstpage.dart';
 import 'package:copit/Screens/SellProduct/fourthpage.dart';
+import 'package:copit/Screens/SignIn.dart';
 import 'package:copit/spacing.dart';
 import 'package:flutter/material.dart';
 
@@ -53,16 +53,6 @@ class DrawerFile extends StatelessWidget {
                     child: Image.asset('assets/images/photo.png'),
                   ),
                 ))
-                // UserAccountsDrawerHeader(
-                //   accountName: Text("Maria Bond"),
-                //   accountEmail: Text("maria97@gmail.com"),
-                //   currentAccountPicture: CircleAvatar(
-                //     child: Text(
-                //       "A",
-                //       style: TextStyle(fontSize: 40.0),
-                //     ),
-                //   ),
-                // ),
               ],
             ),
             ListTile(
@@ -71,12 +61,15 @@ class DrawerFile extends StatelessWidget {
                     borderRadius: BorderRadius.circular(Spacings.small),
                     border: Border.all(color: ColorsConst.borderbgColor)),
                 padding: EdgeInsets.all(Spacings.small),
-                child: Image.asset('assets/images/dashboard.png'),
+                child: Image.asset(
+                  'assets/images/dashboard.png',
+                  color: ColorsConst.borderbgColor,
+                ),
               ),
               title: Text(
                 "Dashboard",
                 style: TextStyle(
-                    color: ColorsConst.PrimryColor,
+                    color: ColorsConst.PrimryblackColor,
                     fontFamily: 'Poppins',
                     fontSize: 14),
               ),
@@ -200,7 +193,7 @@ class DrawerFile extends StatelessWidget {
                 child: Image.asset('assets/images/faq.png'),
               ),
               title: Text(
-                "FAQ’s",
+                "FAQ’s/My Order",
                 style: TextStyle(
                     color: ColorsConst.PrimryblackColor,
                     fontFamily: 'Poppins',
@@ -208,6 +201,8 @@ class DrawerFile extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => MyorderPage()));
               },
             ),
             Container(
@@ -217,7 +212,12 @@ class DrawerFile extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: MaterialButton(
                   height: Spacings.xxxxLarge,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignIn()),
+                        (route) => false);
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,

@@ -515,7 +515,6 @@ class _DashboardPageState extends State<DashboardPage> {
             alignment: Alignment.topRight,
             children: [
               Container(
-                //margin: EdgeInsets.only(bottom: Spacings.medium),
                 width: 160,
                 child: CarouselSlider(
                   items: [
